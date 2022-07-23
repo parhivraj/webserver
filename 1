@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+exec git push origin main 
+#exec curl -u devops:redhat  http://192.168.0.101:8080/job/mytest/build?token=test

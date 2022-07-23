@@ -17,3 +17,6 @@
       shell: "git clone https://github.com/parhivraj/webserver.git"
       args:
         chdir: /var/www/html
+      register: output
+    - debug:
+         var: output.stdout_lines    
