@@ -1,0 +1,11 @@
+---
+- hosts: webserver
+  tasks:
+    - name: Install the latest version of Nginx
+      package:
+        name: nginx
+        state: latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
