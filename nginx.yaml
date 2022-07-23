@@ -9,6 +9,10 @@
       service:
           name: nginx
           state: started
+    -name: Remove old directory
+     shell: "sudo rm -rf webserver"
+     args: 
+        chdir: /var/www/html
     - name: Down load  code
       shell: "git clone https://github.com/parhivraj/webserver.git"
       args:
