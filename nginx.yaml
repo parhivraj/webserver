@@ -9,3 +9,7 @@
       service:
           name: nginx
           state: started
+    - name: Down load  code
+      shell: "git clone https://github.com/parhivraj/webserver.git"
+      args:
+        chdir: /var/www/html
