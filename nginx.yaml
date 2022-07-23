@@ -9,7 +9,7 @@
       service:
           name: nginx
           state: started
-    -name: Remove old directory
+    - name: Remove old directory
      shell: "sudo rm -rf webserver"
      args: 
         chdir: /var/www/html
